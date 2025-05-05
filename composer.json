@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mnavarrocarter/fernet": "^2.0"
+    }
+}

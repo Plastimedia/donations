@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Transforming lives together</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  </head>
+  <body>
+<!--header-->
+<header id="site-header" class="fixed-top">
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark stroke">
+          <img src="./assets/images/logo.png" class="navbar-brand" href="index.html">
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+              data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon fa icon-expand fa-bars">
+              </span>
+              <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+              </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto mr-5">
+                  <li class="nav-item @@about__active">
+                      <a class="nav-link" href="#howweare">Who We Are</a>
+                  </li>
+                  <li class="nav-item @@services__active">
+                      <a class="nav-link" href="#testimonials">Testimonials</a>
+                  </li>
+                  <li class="nav-item @@contact__active">
+                      <a class="nav-link" href="#home">Donate</a>
+                  </li>
+                </ul>
+          </div>
+      </nav>
+  </div>
+</header>
+<!--/header-->
+<!-- banner section -->
+<section id="home" class="w3l-banner py-5 header">
+  <div class="banner-info">
+    <div class="text-header col-lg-6 left-wthree-img mt-lg-0 mt-5">
+      <h1 >Help children <br> transform their lives!<br> </h1>  
+    </div>
+  </div>
+    <div class="form" id="banner">
+      <div class="container-screens">
+        <div class="screen screen1">
+          <h3 class="titulo-form">Community to support</h3>
+          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Mano Amiga Bello</h2>
+          <div class="divider"></div>
+          <div class="btns">
+            <a onclick="where('bello_50')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=YF2V2BKJSMTPW"> From $ 25  USD</a>
+            <a onclick="where('bello_otro')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=YF2V2BKJSMTPW">Other Value USD</a>
+          </div>
+          <div class="divider"></div>
+          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> Mano Amiga Zipaquira</h2>
+          <div class="btns">
+            <a onclick="where('zipaquira_50')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=D4CVRRKX82RQA">From $ 25 USD</a>
+            <a onclick="where('zipaquira_otro')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=D4CVRRKX82RQA">Other Value USD</a>
+          </div>
+          <a href="#" class="btn" id="siguiente_monto">Donate Now</a>
+        </div>
+        <div id="screen-1" class="screen screen2">
+          <form method="post" id="enviar_form">
+            <p style="color: #00275D;"><strong>Donor information</strong></p>
+            <div class="columns">
+              <div>
+                <input name="nombre" type="text" class="info-donor" required placeholder="Name*">
+                <input name="apellidos" type="text" class="info-donor" required placeholder="Lastname*">
+                <input name="correo" type="email"  class="info-donor" required placeholder="Email *">
+              </div>
+              <div>
+                <input name="telefono" type="text" class="info-donor" required placeholder="+1408123456*">
+                <select name="tipo_documento">
+                  <option value="">Type of document</option>
+                  <option value="Cédula de ciudadanía">ID</option>
+                </select>
+                <input id="documento" name="documento" type="text" class="info-donor" required
+                  placeholder="Number document *">
+              </div>
+            </div>
+            <label for="">
+              <a href="https://manoamiga.co/aviso-de-privacidad/"><input type="checkbox" required name="aviso">I agree to the processing of my personal data </a>
+              <p style="color:#00275D"><b>Your donation is tax-deductible in Colombia</b></p>
+            </label>
+            <div class="double-btns">
+              <a href="#" class="btn" id="atras_monto">❮ Back</a>
+              <button class="btn" id="cuenta"> Next ❯</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+</section>
+<!-- //banner section -->
+<!-- /bottom-grids-->
+<section class="w3l-servicesblock py-5" id="manoamiga">
+    <div class="container py-lg-5 py-md-4 py-2">
+      <div class="contenedor-incio">
+      <center><h1 style="color: white;">Why we're here</h1></center>
+        <div class="row">
+            <div class="col-lg-6 about-right-faq align-self">
+                <p class="mt-lg-4 mt-3 mb-lg-5 mb-4">In Colombia, 400,000 young dreams were shattered in 2023 by economic hardship, unequal access to opportunities, family instability, and academic challenges. But amid despair, there is hope. 
+                    <br><br>We ignite opportunities in underprivileged communities by delivering high-quality education and forming positive action leaders.<br><br> <b style="color: white; font-family: 'Kumbh Sans';">Your generosity can spark this profound transformation.</b>
+                </p>
+            </div>
+            <div class="col-lg-6 left-wthree-img mt-lg-0 mt-5">
+                <img src="assets/images/niñas.png" alt="" class="img-fluid radius-image img-niñas">
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="w3l-bottom-grids-6 py-5" id="bottom">
+    <div class="container py-lg-5 py-md-4 py-2">
+      <div class="video-introductorio">
+        <iframe width="702" height="315" src="https://www.youtube.com/embed/t0My-fDt4y0" title="Why Mano Amiga? Join the movement!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+</section>
+<section class="w3l-bottom-grids-6 py-5 duplicate" id="howweare">
+    <h1 class="somos">Who we are?</h1>
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="grids-area-hny main-cont-wthree-fea row">
+            <div class="col-lg-6 col-md-6 grids-feature">
+                <div class="area-box text-p"  id="text-p">
+                  <p class="">Mano Amiga is a nonprofit international network of schools boasting 60 years of positive transformative impact. With a global presence spanning 9 countries, our 38 schools empower over 22,000 students annually.</p>
+                  <h4><a href="#feature" class="title-head">Join us in shaping futures and fostering change worldwide.</a></h4>
+                </div>
+            </div>
+            <div class=" mapa col-lg-6 col-md-6 grids-feature mt-md-0 mt-5">
+                <div class="area-box img-fluid radius-image">
+                    <img src="assets/images/mapa.png" alt="niños sonriendo" style="max-width: 100%; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="w3l-bottom-grids-6 py-5 duplicate" id="bottom">
+  <div class="container py-lg-5 py-md-4 py-2">
+      <div class="grids-area-hny main-cont-wthree-fea row segundo-bloque">
+        <div class="col-lg-6 col-md-6 grids-feature mt-md-0 mt-5">
+          <div class="area-box img-fluid radius-image">
+            <center><img src="assets/images/Rectangle 14 Copy (1).png" alt="niños sonriendo" style="max-width: 100%; width: 78%;"></center>
+          </div>
+      </div>
+          <div class="col-lg-6 col-md-6 grids-feature">
+              <div class="area-box text-p2">
+                <p class="">Our legacy spans 25 years in Colombia as a distinctive institution of integral formation. Through our Scholarship Program, we uplift students in vulnerable conditions, covering 40% to 100% of their annual educational costs.</p>
+                <p></p>
+                <h4><a href="#feature" class="title-head">More than a school, we are a leadership and empowerment community project.</a></h4>
+                <p class="">We tirelessly empower children to dream big, shatter mental and social barriers and craft innovative solutions together, fostering a culture of collaboration and social responsibility.
+                </p>
+                
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+<!-- //bottom-grids-->
+<!--//gallery-->
+<section class="w3l-servicesblock1 py-5 icons" id="moreservices"><br>
+  <h1 class="somos somos2">Our sucess so far</h1>
+  <div class="container py-lg-5 py-md-4 py-3">
+      <div class="grids-area-hny main-cont-wthree-fea row ">
+          <div class="col-lg-3 col-md-6 grids-feature">
+              <div class="area-box">
+                <img src="assets/images/alumno 1.png">
+                  <div class="area-box-info">
+                      <h4><a href="#" class="title-head">1200</a></h4>
+                      <p class="mt-lg-3 mt-2">Students supported in Bello & Zipaquira from a meager socioeconomic level.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 grids-feature mt-md-0 mt-5">
+              <div class="area-box">
+                 <img src="assets/images/silueta-familiar 1.png" alt="">
+                  <div class="area-box-info">
+                      <h4><a href="#" class="title-head">990</a></h4>
+                      <p class="mt-lg-3 mt-2">Families assisted with quality education and human formation.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 grids-feature mt-lg-0 mt-5">
+              <div class="area-box">
+                <img src="assets/images/sombrero-de-graduacion 1.png" alt="">
+                  <div class="area-box-info">
+                      <h4><a href="#" class="title-head" style="text-align: left !important;">708</a></h4>
+                      <p class="mt-lg-3 mt-2">Students successfully graduated from 16 generations.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 grids-feature mt-lg-0 mt-5">
+            <div class="area-box">
+              <img src="assets/images/rango 1.png" alt="">
+                <div class="area-box-info">
+                    <h4><a href="#" class="title-head" style="text-align: left !important;">Impact</a></h4>
+                    <p class="mt-lg-3 mt-2">We achieve a 95% pass rate and a 97% student retention rate.</p>
+                </div>
+            </div>
+        </div>
+          </div>
+          </div>
+      </div>
+  </div>
+  <section class="w3l-portfolio-8 py-5" id="testimonials">
+    <h1 class="somos somos2">Testimonials</h1>
+    <div class="portfolio-main py-lg-5 py-md-4 py-2">
+        <div class="container">
+            <div class="row galler-top">
+                <div class="col-lg-6 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/student.png" alt="product" class="img-fluid" />
+                        <div class="img-info">
+                            <p>Zipaquira</p>
+                            <a href="#url" class="img-title">Carlos, Mano Amiga Student</a>
+                            <p>“Excellent school. The teachers are very committed and patient, they give us books to
+                              read, all the classrooms are cool, and the parks are clean.”</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/Picture.png" alt="product" class="img-fluid">
+                        <div class="img-info">
+                          <p>Bello</p>
+                            <a href="#url" class="img-title">Santiago Toro, Mano Amiga Alumnus</a>
+                            <p>“Like a family, Mano Amiga Bello school profoundly impacted me, fostering a sense of belonging. It emphasized professionalism, inspiring us to envision a path to success. Amidst peers veering towards crime, I found a different road, joining the minority who pursued professional paths.”
+                            </p>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+<section class="dona">
+  <img class="" src="assets/images/CTA (1).png" alt="Imagen niños fondo" style="max-width: 100%; width: 100%;">
+<div class="containerDona">
+  <p>Your support can make all the difference in shaping <br>a brighter tomorrow for our youth! <br></p>
+  <a href="#home" type="button" class="btn-absolute">Donate</a>
+</div>
+</section>
+<!--  News section -->
+<div class="w3l-news nuestra-experiencia" id="news">
+    <section id="grids5-block" class="py-5">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <h1 class="somos">Our expertise</h1>
+        <div class="row mt-lg-5 mt-4">
+          <div class="col-lg-3 col-md-6 mt-md-0 mt-sm-4">
+            <a href="#" class="d-block zoom"><img src="assets/images/infografia-01.png" alt="" class="img-fluid news-image" /></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-md-0 mt-5">
+            <a href="#" class="d-block zoom"><img src="assets/images/infografia-02.png" alt="" class="img-fluid news-image" /></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-lg-0 mt-5">
+            <a href="#" class="d-block zoom"><img src="assets/images/infografia-03.png" alt="" class="img-fluid news-image" /></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-lg-0 mt-5">
+            <a href="#" class="d-block zoom"><img src="assets/images/infografia-04.png" alt="" class="img-fluid news-image" /></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-lg-0 mt-5" style="margin: auto; padding-top: 20px;">
+            <a href="#" class="d-block zoom"><img src="assets/images/infografia-05.png" alt="" class="img-fluid news-image" /></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-lg-0 mt-5" style="margin: auto; padding-top: 20px;">
+            <a href="#" class="d-block zoom"><img src="assets/images/infografia-06.png" alt="" class="img-fluid news-image" /></a>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-lg-0 mt-5" style="margin: auto; padding-top: 20px;">
+            <a href="#" class="d-block zoom"><img src="assets/images/infografia-07.png" alt="" class="img-fluid news-image" /></a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--  //News section -->
+
+  <!-- marcas patrocinadoras -->
+  <section class="w3l-servicesblock11 py-5 marcas" id="moreservices">
+    <h1 class="somos somos2">Our sponsors and partners</h1><br>
+    <div class="contenedor">
+      <div>
+        <img src="assets/images/Rectangle 788.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/spirit.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/catolicworld.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/hilton.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/electrolux.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/biomerieux.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/identidad.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/holcim.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/crown.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/loyola.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/electric.png" alt="fundacion spirit">
+      </div>
+      <div>
+        <img src="assets/images/regnum.png" alt="fundacion spirit">
+      </div>
+    </div>
+  </section>
+  <!-- marcas patrocinadoras -->
+  <!-- contactenos -->
+<div class="w3l-faq-block " id="contact">
+    <div class="container py-lg-5">
+        <div class="row">
+             <div class="col-lg-6 mt-lg-0 mt-sm-5 mt-4">
+                <img src="assets/images/form-contact.png" alt="" class="img-fluid radius-image">
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-sm-5 mt-4">
+              <h1>Contact us</h1>
+              <p>Get in touch with Mano Amiga and help transform lives through education.</p>
+               <form action="correo.php" method="POST">
+                <div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for=""></label>
+                      <input type="name" class="form-control" id="name" name="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for=""></label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for=""></label>
+                    <textarea id="message" name="message" placeholder="Contact us..." class="form-control"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="enviarFormulario">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contactenos -->
+  <!-- footer -->
+  <section class="w3l-footer-29-main">
+    <div class="footer-29">
+      <div class="container py-lg-4">
+        <div class="row footer-top-29">
+          <div class="col-lg-4 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
+
+            <ul class="iconoubicacion">
+              <li>
+              <img src="assets/images/ubicacion.png" alt="iconoubicacion" srcset="">Mano Amiga Bello. Carrera 66 N° 59A-80 El Trapiche, Bello
+              </li>
+              <img src="assets/images/ubicacion.png" alt="iconoubicacion" srcset="">Mano Amiga Zipaquira. Km. 2 Vía Zipaquira - Tocancipa. Vereda Barandillas, Zipaquira. 
+            </ul>
+            <div>
+          </div>
+          </div>
+          <div class="contacto-donantes col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
+            <p>atenciondonantes@manoamiga.co</p>
+            <p>+57 317 509 8219</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
+            <div class="footer-logo mb-4">
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo2.png" alt=""></a>
+            </div>
+            <div class="main-social-footer-29 mt-4">
+              <a href="https://linkedin.com/company/mano-amiga-colombia/" target="_blank"><img src="assets/images/LinkedIn1.png" alt=""></a>
+              <a href="https://www.facebook.com/manoamigacol" target="_blank"><img src="assets/images/Facebook1.png" alt=""></a>
+              <a href="https://www.instagram.com/manoamigacol/" target="_blank"><img src="assets/images/IG1.png" alt=""></a>
+              <a href="https://www.youtube.com/@manoamigadepuertasabiertas6027" target="_blank"><img src="assets/images/Youtube1.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //footer -->
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+
+  <script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+
+<script src="assets/js/circles.js"></script>
+
+<!-- owlcarousel -->
+<script src="assets/js/owl.carousel.js"></script>
+
+  <!--/MENU-JS-->
+  <script>
+    $(document).ready(function () {
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 80) {
+          $("#site-header").addClass("nav-fixed");
+        } else {
+          $("#site-header").removeClass("nav-fixed");
+        }
+      });
+    
+      // Main navigation Active Class Add/Remove
+      $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+        $('navbar-toggler').addClass("collapsed")
+        $('navbar-collapse').removeClass("show");
+      });
+    });
+</script>
+      <!-- //disable body scroll which navbar is in active -->
+  <!--bootstrap-->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- //bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    var donde = "";
+
+    $(document).ready(function () {
+        window.donacion = {
+            link_monto: null,
+        }
+
+        // Selección del monto de donación
+        $(document).on('click', '#select_monto', function (e) {
+            e.preventDefault();
+            $('.btns > #select_monto').removeClass('active');
+            if (!$(this).hasClass('active')) {
+                window.donacion.link_monto = $(this).attr('url');
+                $(this).addClass('active');
+            } else {
+                window.donacion.link_monto = null;
+            }
+        });
+
+        // Navegación entre pantallas del formulario
+        $('#atras_monto').click(function (e) {
+            e.preventDefault();
+            $('.container-screens').css('right', '0');
+        });
+
+        $('#siguiente_monto').click(function (e) {
+            e.preventDefault();
+            if (window.donacion.link_monto == null) {
+                alert('Por favor seleccione un monto a donar');
+            } else {
+                $('.container-screens').css('right', '100%');
+            }
+        });
+
+        // Envío del formulario y redirección al enlace de pago
+        $('#enviar_form').submit(function (e) {
+            e.preventDefault();
+            let data = new FormData(this);
+            data = Object.fromEntries(data.entries());
+
+            fetch('back.php', {
+                method: 'POST',
+                body: JSON.stringify({
+                    key: '12SUMANOHGQDAQXP48HAMIGA8PN9CEJD7RHSYZ4JG04PTJ',
+                    link: window.donacion.link_monto,
+                    nombre: data.nombre,
+                    apellidos: data.apellidos,
+                    correo: data.correo,
+                    telefono: data.telefono,
+                    tipo_documento: data.tipo_documento,
+                    documento: data.documento,
+                    donacion: donde,
+                })
+            }).then(response => response.json()).then(dato => {
+                if (dato.status) {
+                    // Redireccionar al enlace de PayPal según la selección
+                    if (donde === 'bello_50' || donde === 'bello_otro') {
+                        window.open('https://www.paypal.com/donate/?hosted_button_id=YF2V2BKJSMTPW', '_blank');
+                    } else if (donde === 'zipaquira_50' || donde === 'zipaquira_otro') {
+                        window.open('https://www.paypal.com/donate/?hosted_button_id=D4CVRRKX82RQA', '_blank');
+                    }
+                }
+            });
+        });
+    });
+
+    // Función para establecer la variable 'donde'
+    function where(d) {
+        donde = d;
+        console.log(donde);
+    }
+
+    $(document).ready(function() {
+        // Cierra el menú al hacer clic en un enlace
+        $('.nav-fixed a').click(function() {
+            $('.nav-fixed').removeClass('active');
+        });
+    });
+</script>
+  </body>
+
+  </html>
