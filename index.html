@@ -57,9 +57,9 @@
   <div class="banner-info">
     <div class="text-header col-lg-6 left-wthree-img mt-lg-0 mt-5">
       <h1 >Alguna vez alguien creyo en ti...<br> y eso lo cambio todo.<br> </h1>
-      <h2>Hoy puedes hacer los mismo por un niño <br> que sueña con una oportunidad</h2>
+      <h2>Hoy puedes hacer lo mismo por un niño <br> que sueña con una oportunidad</h2>
       <p>Por solo $2.000 diarios, puedes transformar el futuro de una niño en Colombia.<br> Apadrina su educación y cambia su historia</p>
-    <a href="#" target="_blank" rel="noopener noreferrer">
+    <a href="#" target="_blank" rel="noopener noreferrer" class="apoyo">
       ¡APOYALO AQUÍ!
     </a>
     </div>
@@ -67,20 +67,21 @@
     <div class="form" id="banner">
       <div class="container-screens">
         <div class="screen screen1">
-          <h3 class="titulo-form">Community to support</h3>
-          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Mano Amiga Bello</h2>
+          <!-- <h3 class="titulo-form">Tipo de donación</h3> -->
+          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Tipo de donación</h2>
           <div class="divider"></div>
           <div class="btns">
-            <a onclick="where('bello_50')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=YF2V2BKJSMTPW"> From $ 25  USD</a>
-            <a onclick="where('bello_otro')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=YF2V2BKJSMTPW">Other Value USD</a>
+            <a onclick="where('bello_50')" id="select_monto" href="#" class="btn-naranja" url="#">Una sola vez</a>
+            <a onclick="where('bello_otro')" id="select_monto" href="#" class="btn-naranja" url="#">Donación recurrente</a>
           </div>
           <div class="divider"></div>
-          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> Mano Amiga Zipaquira</h2>
+          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> Valor de la donación</h2>
           <div class="btns">
-            <a onclick="where('zipaquira_50')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=D4CVRRKX82RQA">From $ 25 USD</a>
-            <a onclick="where('zipaquira_otro')" id="select_monto" href="#" class="btn-naranja" url="https://www.paypal.com/donate/?hosted_button_id=D4CVRRKX82RQA">Other Value USD</a>
+            <a onclick="where('zipaquira_50')" id="select_monto" href="#" class="btn-naranja" url="#">$ 60.000</a>
+            <a onclick="where('zipaquira_otro')" id="select_monto" href="#" class="btn-naranja" url="#">Otro valor</a>
+            <input type="text" id="monto" class="input-monto" placeholder="Escribe el monto" required>
           </div>
-          <a href="#" class="btn" id="siguiente_monto">Donate Now</a>
+          <a href="#" class="btn" id="siguiente_monto">Donar</a>
         </div>
         <div id="screen-1" class="screen screen2">
           <form method="post" id="enviar_form">
