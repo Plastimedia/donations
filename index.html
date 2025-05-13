@@ -34,11 +34,8 @@
 
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-auto mr-5">
-                  <li class="nav-item @@about__active">
-                      <a class="nav-link" href="#manoamiga">Mano Amiga</a>
-                  </li>
                   <li class="nav-item @@services__active">
-                      <a class="nav-link" href="#">Quiénes somos</a>
+                      <a class="nav-link" href="#manoamiga">Quiénes somos</a>
                   </li>
                   <li class="nav-item @@contact__active">
                       <a class="nav-link" href="#testimonios">Testimonios</a>
@@ -56,7 +53,7 @@
 <section id="home" class="w3l-banner py-5 header">
   <div class="banner-info">
     <div class="text-header col-lg-6 left-wthree-img mt-lg-0 mt-5">
-      <h1 >Alguna vez alguien creyo en ti...<br> y eso lo cambió todo.<br> </h1>
+      <h1 >Alguna vez alguien creyó en ti...<br> y eso lo cambió todo.<br> </h1>
       <h2>Hoy puedes hacer lo mismo por un niño <br> que sueña con una oportunidad</h2>
       <!-- <p>Por solo $2.000 diarios, puedes transformar el futuro de una niño en Colombia.<br> Apadrina su educación y cambia su historia</p> -->
     <a href="https://checkout.wompi.co/l/wZs58F" target="_blank" rel="noopener noreferrer" class="apoyo">
@@ -72,22 +69,21 @@
           <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Tipo de donación</h2>
           <div class="divider"></div>
           <div class="btns">
-            <a id="select_tipo" href="#" class="btn-naranja select_tipo_mensual">
+            <a href="#" class="btn-naranja select_tipo_mensual">
               Donación recurrente
             </a>
-            <a id="select_tipo" href="#" class="btn-naranja select_tipo_unico">
+            <a  href="#" class="btn-naranja select_tipo_unico">
               Una sola vez
             </a>
-            <!-- <a onclick="where('unicavez')" id="select_monto" href="#" class="btn-naranja" url="#">Una sola vez</a>
-            <a onclick="where('recurrente')" id="select_monto" href="#" class="btn-naranja" url="#">Donación recurrente</a> -->
+            
           </div>
+          
           <div class="divider"></div>
           <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> Valor de la donación</h2>
           <div class="btns">
-            <a onclick="where('donacion60')" id="select_monto" href="#" class="btn-naranja" url="#">$ 60.000</a>
-            <a onclick="where('otrovalor')" id="select_monto" href="#" class="btn-naranja" url="#">Otro valor</a>
+            <a onclick="where('donacion60')" id="select_monto" href="#" class="btn-naranja select_monto" data-url="https://checkout.wompi.co/l/2K7NNd">$ 60.000</a>
+            <a onclick="where('otrovalor')" id="select_monto" href="#" class="btn-naranja select_monto" data-url="https://checkout.wompi.co/l/wZs58F">Otro valor</a>
           </div>
-          <!-- <input type="text" id="monto" class="input-monto otro-valor" placeholder="Escribe el monto" required> -->
           <a href="#" class="btn" id="siguiente_monto">Donar</a>
         </div>
         <div id="screen-1" class="screen screen2">
@@ -100,7 +96,7 @@
                 <input name="correo" type="email"  class="info-donor" required placeholder="Correo electronico*">
               </div>
               <div>
-                <input name="telefono" type="text" class="info-donor" required placeholder="1232456*">
+                <input name="telefono" type="number" class="info-donor" required placeholder="Teléfono*">
                 <select name="tipo_documento">
                   <option value="">Tipo de documento</option>
                   <option value="Cédula de ciudadanía">Cédula de ciudadania</option>
@@ -115,12 +111,87 @@
             <label for="">
               <a href="https://manoamiga.co/aviso-de-privacidad/"><input type="checkbox" required name="aviso">Acepto el tratamientos de datos personales</a>
             </label>
+            <input type="hidden" name="tipo_donacion" id="tipo_donacion">
+            <input type="hidden" name="valor_donacion" id="valor_donacion">
+
             <div class="double-btns">
               <a href="#" class="btn" id="atras_monto">❮ Back</a>
               <button class="btn" id="cuenta"> Next ❯</button>
             </div>
           </form>
         </div>
+        <div id="screen-2" style="display: none;" class="screen screen3">
+          <form method="post" id="enviar_form_2">
+            <p><strong>Datos del medio de pago del donante:</strong></p>
+            <div class="columns">
+              <div class="completo">
+                <label for="">Tipo de cuenta</label>
+                <select id="tipo_cuenta" name="tipo_cuenta" required>
+                  <option id="tarejta__credito" value="Tarjeta de credito">Tarjeta de crédito</option>
+                  <option value="Cuenta de Ahorros">Cuenta de Ahorros</option>
+                  <option value="Cuenta Corriente">Cuenta Corriente</option>
+                </select>
+                <label for="">Banco</label>
+                <select name="banco">
+                  <option value="Bancolombia">Bancolombia</option>
+                  <option value="Banco Davivienda">Banco Davivienda</option>
+                  <option value="Banco De Occidente">Banco De Occidente</option>
+                  <option value="Banco Agrario">Banco Agrario</option>
+                  <option value="Banco AV Villa">Banco AV Villas</option>
+                  <option value="Banco BBVA">Banco BBVA</option>
+                  <option value="Banco Caja Social">Banco Caja Social</option>
+                  <option value="Banco Coopcentral">Banco Coopcentral</option>
+                  <option value="Banco De Bogota">Banco de Bogotá</option>
+                  <option value="Banco Falabella">Banco Falabella</option>
+                  <option value="Banco GNB Sudameris">Banco GNB Sudameris </option>
+                  <option value="Banco Pichincha">Banco Pichincha</option>
+                  <option value="Banco Popular">Banco Popular</option>
+                  <option value="Banco Santander">Banco Santander</option>
+                  <option value="Banco Serfinanza">Banco Serfinanza</option>
+                  <option value="Bancoomeva">Bancoomeva</option>
+                  <option value="Banco Citi">Banco Citi</option>
+                  <option value="Confiar Cooperativa Financiera">Confiar Cooperativa Financiera</option>
+                  <option value="Banco Union">Banco Unión</option>
+                  <option value="CFA Cooperativa financiera">CFA Cooperativa financiera</option>
+                  <option value="Daviplata">Daviplata</option>
+                  <option value="Movii">Movii</option>
+                  <option value="Itaú">Itaú</option>
+                  <option value="Nequi">Nequi</option>
+                  <option value="Scotiabank Colpatria">Scotiabank Colpatria</option>
+                  <option value="Bancamia">Bancamía</option>
+                  <option value="Cootrafa">Cotrafa</option>
+                  <option value="Ban100">Ban100</option>
+                  <option value="Bancofinandina">Banco Finandina</option>
+                  <option value="Dale">Dale</option>
+                  <option value="Iris">Iris</option>
+                  <option value="Lulo Bank">Lulo Bank</option>
+                  <option value="Rappipay">Rappipay</option>
+                  <option value="Rappipay Daviplata">Rappipay Daviplata</option>
+                  <option value="Coltefinanciera">Coltefinanciera</option>
+                  <option value="Coofinep Cooperativa Financiera">Coofinep Cooperativa Financiera</option>
+                </select>
+
+                <label for="">Número de cuenta / tarjeta</label>
+                <input id="input_numero_cuenta" name="numero_cuenta" type="number"
+                placeholder="Número de cuenta / tarjeta*">
+                <!-- <label for="">Número de cuenta</label>
+                <input id="input_codigo_tarjeta" name="codigo_tarjeta" type="text"
+                  placeholder="CVV*"> -->
+                <label for="input_fecha_tarjeta" id="input_fecha_tarjeta2">Fecha de vencimiento</label>
+                <input id="input_fecha_tarjeta" name="fecha_tarjeta" type="text"
+                  placeholder="Fecha de vencimiento *">
+                
+                
+              </div>
+            </div>
+
+            <p style="color: #1f2c5b">Encriptamos tu información para mayor seguridad y luego solicitaremos al banco el débito de tu donación.</p>
+            <div class="double-btns">
+              <a href="#" class="btn" id="atras_cc">❮ Atrás</a>
+              <button class="btn" id="donar_ahora">Dona ahora</button>
+            </div>
+          </form>
+        </div>        
       </div>
     </div>
   </div>
@@ -203,7 +274,7 @@
 <!--//gallery-->
 <section class="w3l-servicesblock1 py-5 icons" id="testimonios"><br>
   <section class="w3l-portfolio-8 py-5" id="testimonials">
-    <h1 class="testimonios">Testimonios de donantes</h1>
+    <h1 class="testimonios">Testimonios de egresados</h1>
     <div class="portfolio-main py-lg-5 py-md-4 py-2">
         <div class="container">
             <div class="row galler-top">
@@ -354,125 +425,98 @@
   <!-- //bootstrap-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    var donde = "";
-
+    var tipoDonacionSeleccionado = null;
+    var cuanto = null;
+    var linkSeleccionado = null;
+  
     $(document).ready(function () {
-        window.donacion = {
-            link_monto: null,
+      // Selección del tipo de donación
+      $('.select_tipo_unico').click(function (e) {
+        e.preventDefault();
+        tipoDonacionSeleccionado = 'unica';
+        $('#tipo_donacion').val('unica');
+        $(this).addClass('active');
+        $('.select_tipo_mensual').removeClass('active');
+      });
+  
+      $('.select_tipo_mensual').click(function (e) {
+        e.preventDefault();
+        tipoDonacionSeleccionado = 'recurrente';
+        $('#tipo_donacion').val('recurrente');
+        $(this).addClass('active');
+        $('.select_tipo_unico').removeClass('active');
+      });
+  
+      // Selección del monto
+      $('.select_monto').click(function (e) {
+        e.preventDefault();
+        $('.select_monto').removeClass('active');
+        $(this).addClass('active');
+  
+        cuanto = $(this).text().trim(); // Obtiene el texto como monto
+        $('#valor_donacion').val(cuanto);
+        linkSeleccionado = $(this).data('url');
+      });
+  
+      // Siguiente pantalla
+      $('#siguiente_monto').click(function (e) {
+        e.preventDefault();
+        if (tipoDonacionSeleccionado && cuanto) {
+          $('.container-screens').css('right', '100%');
+        } else {
+          alert('Selecciona el tipo y valor de donación.');
         }
-        // Selección del tipo de donación
-        $('.select_tipo_unico').click(function (e) {
-            e.preventDefault();
-            unico = true;
-            mensual = false;
-            $(this).addClass('active');
-            $('.select_tipo_mensual').removeClass('active');
-        });
+      });
+  
+      // Pantalla anterior
+      $('#atras_monto').click(function (e) {
+        e.preventDefault();
+        $('.container-screens').css('right', '0');
+      });
+  
+      // Envío del formulario
+      $('#enviar_form').submit(function (e) {
+        e.preventDefault();
+        let data = new FormData(this);
+        data = Object.fromEntries(data.entries());
+  
+        if (tipoDonacionSeleccionado === 'recurrente') {
+          // Enviar a servidor (donación recurrente)
+          const screen2 = document.getElementById('screen-2');
+          const screen1 = document.getElementById('screen-1');
+          screen1.style.display = 'none';
+            if (screen2) {
+              screen2.style.display = 'block';
 
-        $('.select_tipo_mensual').click(function (e) {
-            e.preventDefault();
-            mensual = true;
-            unico = false;
-            $(this).addClass('active');
-            $('.select_tipo_unico').removeClass('active');
-        });
-
-        // Selección del monto de donación
-        $(document).on('click', '#select_monto', function (e) {
-            e.preventDefault();
-            $('.btns > #select_monto').removeClass('active');
-            if (!$(this).hasClass('active')) {
-                window.donacion.link_monto = $(this).attr('url');
-                $(this).addClass('active');
-            } else {
-                window.donacion.link_monto = null;
-            }
-        });
-
-        // Navegación entre pantallas del formulario
-        $('#atras_monto').click(function (e) {
-            e.preventDefault();
-            $('.container-screens').css('right', '0');
-        });
-
-        $('#siguiente_monto').click(function (e) {
-            e.preventDefault();
-            if (window.donacion.link_monto == null) {
-                alert('Por favor seleccione un monto a donar');
-            } else {
-                $('.container-screens').css('right', '100%');
-            }
-        });
-
-        // Envío del formulario y redirección al enlace de pago
-        $('#enviar_form').submit(function (e) {
-    e.preventDefault();
-    let data = new FormData(this);
-    data = Object.fromEntries(data.entries());
-
-    // Identifica el tipo de donación
-    const tipoDonacion = data.tipo_donacion; // debe venir del formulario como 'recurrente' o 'unica'
-    const donde = data.valor_donacion; // 'donacion60' o 'otrovalor'
-
-    if (tipoDonacion === 'recurrente') {
-        // Enviar los datos al correo (servidor)
-        fetch('recurrente.php', {
+            }          
+          fetch('recurrente.php', {
             method: 'POST',
             body: JSON.stringify({
-                nombre: data.nombre,
-                apellidos: data.apellidos,
-                correo: data.correo,
-                telefono: data.telefono,
-                tipo_documento: data.tipo_documento,
-                documento: data.documento,
-                donacion: donde
+              nombre: data.nombre,
+              apellidos: data.apellidos,
+              correo: data.correo,
+              telefono: data.telefono,
+              tipo_documento: data.tipo_documento,
+              documento: data.documento,
+              donacion: cuanto
             })
-        }).then(response => response.json()).then(res => {
+          }).then(response => response.json()).then(res => {
             if (res.status) {
-                alert("¡Formulario enviado correctamente! Gracias por tu apoyo.");
+              alert("¡Formulario enviado correctamente! Gracias por tu apoyo.");
             }
-        });
-    } else {
-        // Redirigir según el valor
-        if (donde === 'donacion60') {
-            window.open('https://checkout.wompi.co/l/2K7NNd', '_blank');
-        } else if (donde === 'otrovalor') {
-            window.open('https://checkout.wompi.co/l/wZs58F', '_blank');
+          });
+        } else if (tipoDonacionSeleccionado === 'unica') {
+          if (linkSeleccionado) {
+            window.open(linkSeleccionado, '_blank');
+          } else {
+            alert("Por favor selecciona un monto válido.");
+          }
         }
-    }
-});
-
-        // $('#enviar_form').submit(function (e) {
-        //     e.preventDefault();
-        //     let data = new FormData(this);
-        //     data = Object.fromEntries(data.entries());
-
-        //     fetch('back.php', {
-        //         method: 'POST',
-        //         body: JSON.stringify({
-        //             key: '12SUMANOHGQDAQXP48HAMIGA8PN9CEJD7RHSYZ4JG04PTJ',
-        //             link: window.donacion.link_monto,
-        //             nombre: data.nombre,
-        //             apellidos: data.apellidos,
-        //             correo: data.correo,
-        //             telefono: data.telefono,
-        //             tipo_documento: data.tipo_documento,
-        //             documento: data.documento,
-        //             donacion: donde,
-        //         })
-        //     }).then(response => response.json()).then(dato => {
-        //         if (dato.status) {
-        //             // Redireccionar al enlace de PayPal según la selección
-        //             if (donde === 'donacion60') {
-        //                 window.open('https://checkout.wompi.co/l/2K7NNd', '_blank');
-        //             } else if (donde === 'otrovalor') {
-        //                 window.open('https://checkout.wompi.co/l/wZs58F', '_blank');
-        //             }
-        //         }
-        //     });
-        // });
+      });
     });
-</script>
+  </script>
+  
+  
   </body>
 
   </html>

@@ -39,19 +39,19 @@ if (empty($message)) {
 
         // Configuración del correo
         $mail->setFrom($email, $name);
-        $mail->addAddress('chernandezr@arcol.org'); // Dirección de destino
+        $mail->addAddress('Mrdiaz@arcol.org'); // Dirección de destino
         $mail->addReplyTo($email, $name);
 
         // Contenido del correo
         $mail->isHTML(true);
         $mail->Subject = "New Message: " . $select;
-        $mail->Body = "<p><strong>Name:</strong> $name</p>
-                       <p><strong>Email:</strong> $email</p>
-                       <p><strong>Message:</strong></p>
+        $mail->Body = "<p><strong>Nombre:</strong> $name</p>
+                       <p><strong>Correo Electrónico:</strong> $email</p>
+                       <p><strong>Mensaje:</strong></p>
                        <p>$message</p>";
 
         $mail->send();
-        echo "<script>alert('Great, thank you very much for contacting us');window.location.href = 'https://donations.manoamiga.co/';</script>";
+        echo "<script>alert('Gracias por contáctarnos');window.location.href = 'https://amigos.manoamiga.co/';</script>";
     } catch (Exception $e) {
         echo "Failed to send message. Mailer Error: {$mail->ErrorInfo}";
     }

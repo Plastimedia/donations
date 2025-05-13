@@ -155,7 +155,7 @@ ul{
   background-color: #f2f2f2;
   border-radius: 50px;
   width: 480px;
-  height: 400px;
+  height: auto;
   box-shadow: 0 0 50px -25px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   top: 50%;
@@ -213,9 +213,17 @@ ul{
     transition: all 0.4s;
 }
 .screen {
-    padding: 25px;
+    padding:25px;
     display: block;
     width: 480px;
+}
+.screen3{
+    padding: 10px 25px;
+    display: block;
+    width: 480px;
+}
+.screen3 p,strong{
+  color: #1f2c5b;
 }
 .screen .columns {
     display: flex;
@@ -224,7 +232,7 @@ ul{
     gap: 15px;
 }
 .screen .columns > div {
-    width: 50%;
+    width: 100%;
 }
 .divider {
     display: block;
@@ -3641,6 +3649,12 @@ header.nav-fixed {
   max-width: 800px;
   margin: auto;
   text-align: center; }
+.banner-info{
+  position: absolute;
+  /* top: 400px; */
+  left: 100px;
+  line-height: 5;
+}
 .apoyo{
   background-color: #F57B20;
     color: white;
@@ -3656,6 +3670,40 @@ header.nav-fixed {
 }
 .scroll_to_more:hover{
   transform: scale(1.1);
+}
+@media (max-width: 2265px) {
+  .banner-info {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    line-height: 5;
+}
+}
+@media screen and (min-width: 1000px) and (max-width: 1400px){
+  .banner-info {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    line-height: 5;
+}
+}
+@media screen and (min-width: 360px) and (max-width: 700px) {
+  .banner-info {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    line-height: 5;
+  }
+  .mt-4, .my-4 {
+    margin-top: 1.5rem !important;
+    width: 80%;
+    margin: auto;
+}
+}
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .banner-info{
+    display: none; 
+  }
 }
 .banner-info .text-header > h1{
 color: white;
@@ -3884,8 +3932,7 @@ text-shadow: 3px 6px 15px black;
 }
 .w3l-footer-29-main {
   background: #00275D;
-margin-top: 10px; 
-padding-top: 50px;}
+margin-top: 10px; }
 
 .w3l-footer-29-main a.navbar-brand {
   font-size: 32px;
@@ -5122,7 +5169,6 @@ h2.title {
   text-transform: uppercase;
   font-family: roboto, sans-serif;
   display: inline-block;
-  line-height: 20px;
 }
 .contenedor-incio a.btn-absolute {
   position: relative;
@@ -5141,14 +5187,6 @@ h2.title {
   font-size: small;
   font-weight: 700;
 }
-.apoyo{
-  display: none;
-}
-.banner-info {
-  position: relative;
-  left: 0;
-  line-height: 5;
-  top: 30%;
-}
 }
 /* ESTILOS RESPONSIVE */
+
