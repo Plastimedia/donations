@@ -119,79 +119,7 @@
               <button class="btn" id="cuenta"> Next ❯</button>
             </div>
           </form>
-        </div>
-        <div id="screen-2" style="display: none;" class="screen screen3">
-          <form method="post" id="enviar_form_2">
-            <p><strong>Datos del medio de pago del donante:</strong></p>
-            <div class="columns">
-              <div class="completo">
-                <label for="">Tipo de cuenta</label>
-                <select id="tipo_cuenta" name="tipo_cuenta" required>
-                  <option id="tarejta__credito" value="Tarjeta de credito">Tarjeta de crédito</option>
-                  <option value="Cuenta de Ahorros">Cuenta de Ahorros</option>
-                  <option value="Cuenta Corriente">Cuenta Corriente</option>
-                </select>
-                <label for="">Banco</label>
-                <select name="banco">
-                  <option value="Bancolombia">Bancolombia</option>
-                  <option value="Banco Davivienda">Banco Davivienda</option>
-                  <option value="Banco De Occidente">Banco De Occidente</option>
-                  <option value="Banco Agrario">Banco Agrario</option>
-                  <option value="Banco AV Villa">Banco AV Villas</option>
-                  <option value="Banco BBVA">Banco BBVA</option>
-                  <option value="Banco Caja Social">Banco Caja Social</option>
-                  <option value="Banco Coopcentral">Banco Coopcentral</option>
-                  <option value="Banco De Bogota">Banco de Bogotá</option>
-                  <option value="Banco Falabella">Banco Falabella</option>
-                  <option value="Banco GNB Sudameris">Banco GNB Sudameris </option>
-                  <option value="Banco Pichincha">Banco Pichincha</option>
-                  <option value="Banco Popular">Banco Popular</option>
-                  <option value="Banco Santander">Banco Santander</option>
-                  <option value="Banco Serfinanza">Banco Serfinanza</option>
-                  <option value="Bancoomeva">Bancoomeva</option>
-                  <option value="Banco Citi">Banco Citi</option>
-                  <option value="Confiar Cooperativa Financiera">Confiar Cooperativa Financiera</option>
-                  <option value="Banco Union">Banco Unión</option>
-                  <option value="CFA Cooperativa financiera">CFA Cooperativa financiera</option>
-                  <option value="Daviplata">Daviplata</option>
-                  <option value="Movii">Movii</option>
-                  <option value="Itaú">Itaú</option>
-                  <option value="Nequi">Nequi</option>
-                  <option value="Scotiabank Colpatria">Scotiabank Colpatria</option>
-                  <option value="Bancamia">Bancamía</option>
-                  <option value="Cootrafa">Cotrafa</option>
-                  <option value="Ban100">Ban100</option>
-                  <option value="Bancofinandina">Banco Finandina</option>
-                  <option value="Dale">Dale</option>
-                  <option value="Iris">Iris</option>
-                  <option value="Lulo Bank">Lulo Bank</option>
-                  <option value="Rappipay">Rappipay</option>
-                  <option value="Rappipay Daviplata">Rappipay Daviplata</option>
-                  <option value="Coltefinanciera">Coltefinanciera</option>
-                  <option value="Coofinep Cooperativa Financiera">Coofinep Cooperativa Financiera</option>
-                </select>
-
-                <label for="">Número de cuenta / tarjeta</label>
-                <input id="input_numero_cuenta" name="numero_cuenta" type="number"
-                placeholder="Número de cuenta / tarjeta*">
-                <!-- <label for="">Número de cuenta</label>
-                <input id="input_codigo_tarjeta" name="codigo_tarjeta" type="text"
-                  placeholder="CVV*"> -->
-                <label for="input_fecha_tarjeta" id="input_fecha_tarjeta2">Fecha de vencimiento</label>
-                <input id="input_fecha_tarjeta" name="fecha_tarjeta" type="text"
-                  placeholder="Fecha de vencimiento *">
-                
-                
-              </div>
-            </div>
-
-            <p style="color: #1f2c5b">Encriptamos tu información para mayor seguridad y luego solicitaremos al banco el débito de tu donación.</p>
-            <div class="double-btns">
-              <a href="#" class="btn" id="atras_cc">❮ Atrás</a>
-              <button class="btn" id="donar_ahora">Dona ahora</button>
-            </div>
-          </form>
-        </div>        
+        </div>    
       </div>
     </div>
   </div>
@@ -481,30 +409,11 @@
         data = Object.fromEntries(data.entries());
   
         if (tipoDonacionSeleccionado === 'recurrente') {
-          // Enviar a servidor (donación recurrente)
-          const screen2 = document.getElementById('screen-2');
-          const screen1 = document.getElementById('screen-1');
-          screen1.style.display = 'none';
-            if (screen2) {
-              screen2.style.display = 'block';
-
-            }          
-          fetch('recurrente.php', {
-            method: 'POST',
-            body: JSON.stringify({
-              nombre: data.nombre,
-              apellidos: data.apellidos,
-              correo: data.correo,
-              telefono: data.telefono,
-              tipo_documento: data.tipo_documento,
-              documento: data.documento,
-              donacion: cuanto
-            })
-          }).then(response => response.json()).then(res => {
-            if (res.status) {
-              alert("¡Formulario enviado correctamente! Gracias por tu apoyo.");
-            }
-          });
+                  if (cuanto === '$ 60.000') {
+          window.open('https://checkout.wompi.co/l/iu7srN', '_blank');
+        } else {
+          window.open('https://checkout.wompi.co/l/Il8XNZ', '_blank');
+        }
         } else if (tipoDonacionSeleccionado === 'unica') {
           if (linkSeleccionado) {
             window.open(linkSeleccionado, '_blank');
