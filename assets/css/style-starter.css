@@ -340,9 +340,9 @@ ul{
 }
 @media screen and (min-width: 358px) and (max-width: 500px) {
 
-  .contenedor-incio{
+  /* .contenedor-incio{
     margin-top: 100%;
-  }
+  } */
   .form{
     max-width: 100%;
     width: 100%;
@@ -5052,8 +5052,28 @@ h2.title {
   color: var(--heading-color);
   display: block;
   font-weight: 600; }
+  section#home-responsive{
+    display: none;
+  }
+
 /* ESTILOS RESPONSIVE */
 @media screen and (max-width:800px) {
+  section#home-responsive{
+    display: block;
+  }
+  section#home{
+    display: none;
+  }
+  section#home-responsive .banner-info{
+        position: relative !important;
+        top: 0;
+        left: 0;
+        line-height: 5;
+  }
+  section#home-responsive .form{
+    position: relative;
+    top: 100px;
+  }
   .w3l-banner {
     background: url(../images/banner-responsive.png) no-repeat 0px 0px;
     -ms-background-size: cover;
